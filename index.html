@@ -1,42 +1,99 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Mi primera página web</title>
+<!DOCTYPE html> <!-- tipo de documento (HTML5) -->
+<html lang="es"> <!-- inicia el documento HTML y define el idioma del documento como español -->
+<head> <!-- sección de metadatos/información sobre el documento HTML -->
+    <meta charset="UTF-8"> <!-- codificación de caracteres para el documento -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- (se adapte a diferentes tamaños de pantalla) -->
+    <title>Monitoreo Meteorológico</title> <!-- título de tu página web, que se muestra en la pestaña del navegador -->
     <style>
+        /* Aquí puedes agregar tu CSS */
         body {
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
+                font-family: Arial, sans-serif; /* Cambia la fuente del cuerpo del documento */
+                background-color: #F3E5AB; /* Cambia el color de fondo del cuerpo del documento */
+                }
         header {
-            background: #50a8a0;
-            color: white;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #e8491d 3px solid;
+            padding: 10px; /* fondo del encabezado */
+            color: #96118f; /* Cambia el color del título a crema */
+                }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            }
+        nav ul li {
+            display: inline; /* Hace que los elementos de la lista de navegación se muestren en línea en lugar de en vertical */
+            margin-right: 10px; /* Agrega un poco de espacio a la derecha de cada elemento de la lista de navegación */
+            }
+        nav ul li a {
+            color: rgb(22, 18, 236); /* Cambia el color de los enlaces en la lista de navegación */
+            text-decoration: none; /* Elimina el subrayado de los enlaces en la lista de navegación */
+             }
+        .titulo {
+            background-color: #aa1515; /* Cambia el color de fondo del título */
+            color: #000000; /* Cambia el color del título a crema */     
+            } 
+        .center {
+            display: flex; /* Esto establece el tipo de visualización del contenedor a flex, lo que permite la alineación fácil de los elementos hijos */
+            justify-content: center; /* Esto centra los elementos hijos a lo largo del eje horizontal */
+            align-items: center; /* Esto centra los elementos hijos a lo largo del eje vertical */
+            }
+
+        .subtitulo {
+            background-color: #020ead; /* Cambia el color de fondo de los subtítulos */
+            color: #9e0808; /* Cambia el color del título a crema */        
+            }
+        footer {
+            background-color: #aa9e5aad; /* Cambia el color de fondo del pie de página */
+            color: rgb(0, 0, 0); /* Cambia el color del texto en el pie de página */
+            padding: 10px; /* Agrega un poco de espacio alrededor del contenido del pie de página */
+            position: relative; /* Fija el pie de página en la parte inferior de la página */
+            bottom: 0; /* Alinea el pie de página en la parte inferior de la página */
+            width: 100%; /* Hace que el pie de página tenga el ancho completo de la página */
         }
-        header a {
-            color: #ffffff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-    </style>
+       
+    </style> <!-- CSS para estilizar tu página web -->
 </head>
-<body>
-    <header>
-        <div class="container">
-            <h1>Bienvenido a mi primera página web</h1>
-        </div>
-    </header>
-    <div class="container">
-        <p>Esta es una página web básica creada con HTML. Puedes modificarla y usarla como base para tu propio proyecto.</p>
-    </div>
+<body> <!-- contenido visible de tu página web -->
+    <header> <!--  contener contenido de encabezado -->
+        <nav> <!-- elementos de navegación -->
+            <ul> <!-- lista desordenada -->
+                <li><a href="#introduccion">Introducción</a></li> <!-- Cada elemento <li> representa un elemento de la lista. Dentro de cada elemento de la lista, hay un enlace (<a>) que lleva a diferentes secciones de tu página web -->
+                <li><a href="#acerca-de">Acerca de</a></li>
+                <li><a href="#tecnologia">Tecnología</a></li>
+                <li><a href="#datos">Datos</a></li>
+            </ul>
+        </nav>
+        <h1 class="titulo">Bienvenido a nuestra plataforma de monitoreo meteorológico en tiempo real basada en IoT</h1> <!-- Esta es una etiqueta de encabezado. <h1> es el encabezado de nivel más alto y se utiliza para los títulos principales -->
+            <div class="center">
+                <img src="modulo de comunicacion.jpg" alt="Descripción de la imagen" style="width: 20%;">
+            </div>
+   
+        </header>
+    <main> <!-- el contenido principal de tu página web -->
+        <section id="introduccion"> <!-- grupar contenido relacionado. El atributo id se utiliza para identificar la sección -->
+            <h2 class="subtitulo">Introducción</h2> <!-- Se utiliza para los subtítulos -->
+            <p>¡Bienvenido a nuestra plataforma de monitoreo meteorológico en tiempo real basada en IoT! Esta página web es el resultado 
+                de un innovador proyecto que combina la tecnología de sensores meteorológicos con la red LoRaWAN y The Things Network para 
+                proporcionarte datos precisos y actualizados sobre las condiciones climáticas. Nuestros sensores IoT, alimentados por la 
+                potente tecnología LoRa Rack 1300, recogen datos sobre diversos parámetros meteorológicos y los transmiten a través de la red LoRaWAN.
+                 Esta red de largo alcance y bajo consumo de energía nos permite recopilar datos de sensores ubicados en áreas remotas y 
+                 difíciles de alcanzar. Los datos son luego enviados a The Things Network, una red global de código abierto para IoT. A través de MQTT, 
+                 un protocolo de mensajería ligero diseñado para dispositivos IoT, los datos son finalmente entregados a nuestro servidor y visualizados 
+                 en esta página web. Esto te permite acceder a información meteorológica en tiempo real desde cualquier lugar y en cualquier momento. 
+                 Detrás de cada dato que ves, hay una sofisticada infraestructura tecnológica trabajando para proporcionarte la información más precisa 
+                 y actualizada.Esperamos que encuentres esta plataforma útil y te invitamos a explorar y descubrir más sobre el clima en tu área.</p> <!-- Esta etiqueta se utiliza para el texto del párrafo -->
+        </section>
+        <section id="acerca-de">
+            <h2 class="subtitulo">Acerca de</h2>
+            <!-- Aquí puedes agregar información sobre el proyecto -->
+        </section>
+        <section id="tecnologia">
+            <h2 class="subtitulo">Tecnología</h2> <!-- Aquí puedes agregar información sobre la tecnología utilizada -->
+        </section>
+        <section id="datos"> <!-- datos -->
+            <h2 class="subtitulo">Datos</h2>
+        </section>
+    </main>
+    <footer>
+        <p>Contacto: tuemail@ejemplo.com</p>
+    </footer>
 </body>
-</html>
+</html>              
